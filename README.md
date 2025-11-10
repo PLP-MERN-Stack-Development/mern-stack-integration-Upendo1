@@ -37,6 +37,7 @@ mern-blog/
 
 
 │ └── App.jsx # Main React app component
+
 │
 ├── server/ # Express.js back-end
 
