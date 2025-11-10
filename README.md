@@ -1,78 +1,192 @@
-# MERN Stack Integration Assignment
+# 📰 MERN Blog Application
 
-This assignment focuses on building a full-stack MERN (MongoDB, Express.js, React.js, Node.js) application that demonstrates seamless integration between front-end and back-end components.
+## 🔄 Week 4: Deep Dive into MERN Stack Integration
 
-## Assignment Overview
+### 🚀 Objective
+Build a full-stack **MERN (MongoDB, Express.js, React.js, Node.js)** application that demonstrates seamless integration between front-end and back-end components, including database operations, API communication, and state management.
 
-You will build a blog application with the following features:
-1. RESTful API with Express.js and MongoDB
-2. React front-end with component architecture
-3. Full CRUD functionality for blog posts
-4. User authentication and authorization
-5. Advanced features like image uploads and comments
+---
 
-## Project Structure
+## 📂 Project Structure
 
-```
 mern-blog/
-├── client/                 # React front-end
-│   ├── public/             # Static files
-│   ├── src/                # React source code
-│   │   ├── components/     # Reusable components
-│   │   ├── pages/          # Page components
-│   │   ├── hooks/          # Custom React hooks
-│   │   ├── services/       # API services
-│   │   ├── context/        # React context providers
-│   │   └── App.jsx         # Main application component
-│   └── package.json        # Client dependencies
-├── server/                 # Express.js back-end
-│   ├── config/             # Configuration files
-│   ├── controllers/        # Route controllers
-│   ├── models/             # Mongoose models
-│   ├── routes/             # API routes
-│   ├── middleware/         # Custom middleware
-│   ├── utils/              # Utility functions
-│   ├── server.js           # Main server file
-│   └── package.json        # Server dependencies
-└── README.md               # Project documentation
-```
 
-## Getting Started
 
-1. Accept the GitHub Classroom assignment invitation
-2. Clone your personal repository that was created by GitHub Classroom
-3. Follow the setup instructions in the `Week4-Assignment.md` file
-4. Complete the tasks outlined in the assignment
+├── client/ # React front-end
 
-## Files Included
 
-- `Week4-Assignment.md`: Detailed assignment instructions
-- Starter code for both client and server:
-  - Basic project structure
-  - Configuration files
-  - Sample models and components
+│ ├── public/ # Static files
 
-## Requirements
 
-- Node.js (v18 or higher)
-- MongoDB (local installation or Atlas account)
-- npm or yarn
-- Git
+│ └── src/ # React source code
 
-## Submission
 
-Your work will be automatically submitted when you push to your GitHub Classroom repository. Make sure to:
+│ ├── components/ # Reusable UI components
 
-1. Complete both the client and server portions of the application
-2. Implement all required API endpoints
-3. Create the necessary React components and hooks
-4. Document your API and setup process in the README.md
-5. Include screenshots of your working application
 
-## Resources
+│ ├── pages/ # Page components
 
-- [MongoDB Documentation](https://docs.mongodb.com/)
-- [Express.js Documentation](https://expressjs.com/)
-- [React Documentation](https://react.dev/)
-- [Node.js Documentation](https://nodejs.org/en/docs/)
-- [Mongoose Documentation](https://mongoosejs.com/docs/) 
+
+│ ├── hooks/ # Custom React hooks
+
+
+│ ├── services/ # API service layer
+
+
+│ ├── context/ # Context providers (state)
+
+
+│ └── App.jsx # Main React app component
+│
+├── server/ # Express.js back-end
+
+
+│ ├── config/ # Database configuration
+
+
+│ ├── controllers/ # Route controllers
+
+
+│ ├── models/ # Mongoose models
+
+
+│ ├── routes/ # API route definitions
+
+
+│ ├── middleware/ # Custom middlewares
+
+
+│ ├── utils/ # Utility/helper functions
+
+
+│ └── server.js # Main server entry point
+│
+
+├── .gitignore # Git ignore rules
+
+
+├── package.json # Root dependency info
+
+
+├── Home.PNG # Screenshot - Home Page
+
+
+├── Login.PNG # Screenshot - Login Page
+
+
+├── Posts.PNG # Screenshot - Posts Page
+
+
+└── README.md # Project documentation
+
+
+
+---
+
+## 🧩 Screenshots
+
+| Section | Screenshot |
+|----------|-------------|
+| 🏠 Home Page | ![Home Page](./Home.PNG) |
+| 🔐 Login Page | ![Login Page](./Login.PNG) |
+| 📝 Posts Page | ![Posts Page](./Posts.PNG) |
+
+---
+
+## 📘 Tasks Overview
+
+### **Task 1: Project Setup**
+- Configure folder structure for both client and server.
+- Connect MongoDB with Mongoose.
+- Setup Express.js server with CORS, body-parser, and dotenv.
+- Create React front-end using Vite.
+- Configure `.env` files for client and server.
+
+### **Task 2: Back-End Development**
+- RESTful API endpoints:
+  - `GET /api/posts` → Get all blog posts  
+  - `GET /api/posts/:id` → Get one post  
+  - `POST /api/posts` → Create a new post  
+  - `PUT /api/posts/:id` → Update an existing post  
+  - `DELETE /api/posts/:id` → Delete a post  
+  - `GET /api/categories` → Get all categories  
+  - `POST /api/categories` → Create a new category  
+- Create `Post` and `Category` models using Mongoose.  
+- Validate inputs using `express-validator`.  
+- Add global error handling middleware.
+
+### **Task 3: Front-End Development**
+- Build React components for:
+  - Post List  
+  - Single Post  
+  - Create/Edit Post Form  
+  - Navigation Bar and Layout  
+- Use React Router for navigation.  
+- Use `useState`, `useEffect`, and `useContext` for state management.  
+- Create a custom API service for backend communication.
+
+### **Task 4: Integration and Data Flow**
+- Connect front-end and back-end using Axios.  
+- Implement API service (`client/src/services/api.js`).  
+- Handle form submission, loading, and error states.  
+- Display success/failure messages.  
+- Ensure posts update dynamically in the UI.
+
+### **Task 5: Advanced Features (Optional)**
+- Add authentication (login/register).  
+- Implement image uploads for posts.  
+- Add pagination and search.  
+- Add comments section for blog posts.
+
+---
+
+## ⚙️ Setup & Installation
+
+### 1️⃣ Prerequisites
+- **Node.js** (v18 or higher)
+- **MongoDB** (local or Atlas)
+
+### 2️⃣ Clone Repository
+```bash
+git clone https://github.com/yourusername/mern-blog.git
+cd mern-blog
+
+
+3️⃣ Install Server Dependencies
+cd server
+npm install
+
+
+4️⃣ Install Client Dependencies
+cd ../client
+npm install
+
+
+5️⃣ Environment Variables
+
+server/.env
+
+PORT=5000
+MONGO_URI=mongodb://localhost:27017/mern_db
+
+
+client/.env
+
+VITE_API_BASE_URL=http://localhost:5000/api
+
+
+
+6️⃣ Start Development Servers
+# In server
+npm run dev
+
+# In client
+npm run dev
+
+
+Visit:
+🖥️ Front-end → http://localhost:5173
+
+⚙️ API → http://localhost:5000/api
+
+
